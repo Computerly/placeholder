@@ -8,7 +8,7 @@
 	<title>Rebricks Digital</title>
 </svelte:head>
 
-<main class="relative h-screen w-full overflow-hidden">
+<main class="relative h-[100dvh] w-full overflow-hidden">
 	<img
 		src={backgroundImage}
 		alt="background"
