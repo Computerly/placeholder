@@ -66,7 +66,7 @@
 		</div>
 
 		<h1 class="text-center text-xl font-semibold sm:text-2xl lg:text-4xl">
-			Great things are coming, stay tuned.
+			Pardon the Dust—Magic in the Making
 		</h1>
 	</div>
 	<div>
