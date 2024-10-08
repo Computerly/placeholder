@@ -22,7 +22,7 @@
 	<div class="absolute left-1/2 top-[12%] -translate-x-1/2">
 		<!-- <img src={logo} alt="Rebricks Logo" /> -->
 
-		<div class="mb-4 flex items-center gap-2 sm:gap-4 lg:gap-8">
+		<div class="mb-4 flex items-center justify-center gap-2 sm:gap-4 lg:gap-8">
 			<svg
 				class="aspect-square h-9 sm:h-12 lg:h-24"
 				viewBox="0 0 100 100"
@@ -64,10 +64,13 @@
 				Rebricks <span class="font-light">Digital</span>
 			</h1>
 		</div>
-
-		<h1 class="text-center text-xl font-semibold sm:text-2xl lg:text-4xl">
+		<h2 class="mb-8 text-center text-xl font-semibold sm:text-2xl lg:text-4xl">
 			Pardon the Dust—Magic in the Making
-		</h1>
+		</h2>
+		<p class="text-center text-3xl">
+			From custom websites to consulting, we build digital solutions that help you stand out and
+			grow your business.
+		</p>
 	</div>
 	<div>
 		<img src={tumbleweed} alt="tumbleweed" class="tumbleweed" />
