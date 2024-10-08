@@ -2,6 +2,13 @@
 	import backgroundImage from '$lib/landscape.webp';
 	import tumbleweed from '$lib/tumbleweed.webp';
 	import rocks from '$lib/rocksLandscape.webp';
+	import { onMount } from 'svelte';
+
+	let email: string = '';
+
+	onMount(() => {
+		email = 'hello@rebricksdigtal.com';
+	});
 </script>
 
 <svelte:head>
@@ -19,6 +26,7 @@
 		alt="rocks overlay"
 		class="absolute inset-0 z-50 h-full w-full object-cover object-bottom"
 	/>
+	<!-- Content -->
 	<div class="absolute left-1/2 top-[12%] -translate-x-1/2">
 		<!-- <img src={logo} alt="Rebricks Logo" /> -->
 
@@ -72,6 +80,14 @@
 			grow your business.
 		</p>
 	</div>
+
+	<!-- Contact -->
+	<p class="absolute bottom-8 right-8 z-50 text-2xl text-white">
+		Say hi!
+
+		<a href={'mailto:' + email} class="text-lime-500 font-bold">{email}</a>
+	</p>
+
 	<div>
 		<img src={tumbleweed} alt="tumbleweed" class="tumbleweed" />
 		<img src={tumbleweed} alt="tumbleweed" class="tumbleweed" />
