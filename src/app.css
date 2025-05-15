@@ -1,3 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @import "tailwindcss";
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@plugin "daisyui";
+@font-face {
+  font-family: "GeneralSans-Variable";
+  src:
+    url("/fonts/general-sans/GeneralSans-Variable.woff2") format("woff2"),
+    url("/fonts/general-sans/GeneralSans-Variable.woff") format("woff"),
+    url("/fonts/general-sans/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  @apply font-general-sans;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: #1c1c1c;
+  --color-base-200: #3d3d3d;
+  --color-base-300: #454545;
+  --color-base-content: #f6f6f6;
+  --color-primary: #12a0d3;
+  --color-primary-content: #0a3247;
+  --color-secondary: #fb3999;
+  --color-secondary-content: #560123;
+  --color-accent: #12a0d3;
+  --color-accent-content: #ffffff;
+  --color-neutral: #0a5e82;
+  --color-neutral-content: #f0faff;
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: #18cf63;
+  --color-success-content: #023118;
+  --color-warning: #efca08;
+  --color-warning-content: #422506;
+  --color-error: #ff1f41;
+  --color-error-content: #52000c;
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 2rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@utility btn-neutral {
+  @apply bg-carbon-950 text-carbon-50 border-carbon-500;
+}
+
+@utility btn {
+  @apply font-normal;
+}
+
+@theme {
+  --font-general-sans: "GeneralSans-Variable", sans-serif;
+  --font-display: "GeneralSans-Variable", sans-serif;
+  --font-body: "GeneralSans-Variable", sans-serif;
+
+  --color-carbon-50: #f6f6f6;
+  --color-carbon-100: #e7e7e7;
+  --color-carbon-200: #d1d1d1;
+  --color-carbon-300: #b0b0b0;
+  --color-carbon-400: #888888;
+  --color-carbon-500: #6d6d6d;
+  --color-carbon-600: #5d5d5d;
+  --color-carbon-700: #4f4f4f;
+  --color-carbon-800: #454545;
+  --color-carbon-900: #3d3d3d;
+  --color-carbon-950: #1c1c1c;
+
+  --color-uranium-50: #fefee8;
+  --color-uranium-100: #fefec3;
+  --color-uranium-200: #fefa8a;
+  --color-uranium-300: #fdef47;
+  --color-uranium-400: #fadf15;
+  --color-uranium-500: #efca08;
+  --color-uranium-600: #ca9a04;
+  --color-uranium-700: #a16f07;
+  --color-uranium-800: #85570e;
+  --color-uranium-900: #714712;
+  --color-uranium-950: #422506;
+
+  --color-patina-50: #f0faff;
+  --color-patina-100: #e1f3fd;
+  --color-patina-200: #bce8fb;
+  --color-patina-300: #80d8f9;
+  --color-patina-400: #3dc3f3;
+  --color-patina-500: #12a0d3;
+  --color-patina-600: #078bc2;
+  --color-patina-700: #076f9d;
+  --color-patina-800: #0a5e82;
+  --color-patina-900: #0e4d6c;
+  --color-patina-950: #0a3247;
+
+  --color-cesium-50: #fff8ec;
+  --color-cesium-100: #ffeed3;
+  --color-cesium-200: #ffd9a7;
+  --color-cesium-300: #ffbe6f;
+  --color-cesium-400: #ff9635;
+  --color-cesium-500: #ff780e;
+  --color-cesium-600: #fb6107;
+  --color-cesium-700: #c94305;
+  --color-cesium-800: #9f360d;
+  --color-cesium-900: #802e0e;
+  --color-cesium-950: #451505;
+
+  --color-iodine-50: #f5f0ff;
+  --color-iodine-100: #eee4ff;
+  --color-iodine-200: #dfccff;
+  --color-iodine-300: #c8a4ff;
+  --color-iodine-400: #b070ff;
+  --color-iodine-500: #9c37ff;
+  --color-iodine-600: #960fff;
+  --color-iodine-700: #8c00ff;
+  --color-iodine-800: #7500da;
+  --color-iodine-900: #6200b3;
+  --color-iodine-950: #3b007a;
+
+  --color-rhodium-50: #fef1f8;
+  --color-rhodium-100: #fee5f3;
+  --color-rhodium-200: #ffcbe9;
+  --color-rhodium-300: #ffa1d5;
+  --color-rhodium-400: #ff66b7;
+  --color-rhodium-500: #fb3999;
+  --color-rhodium-600: #dc136c;
+  --color-rhodium-700: #cd095b;
+  --color-rhodium-800: #a90b4b;
+  --color-rhodium-900: #8c0f41;
+  --color-rhodium-950: #560123;
+
+  --color-emerald-50: #effef5;
+  --color-emerald-100: #dafee8;
+  --color-emerald-200: #b7fbd2;
+  --color-emerald-300: #7ff6af;
+  --color-emerald-400: #41e785;
+  --color-emerald-500: #18cf63;
+  --color-emerald-600: #0dac4f;
+  --color-emerald-700: #109648;
+  --color-emerald-800: #116a37;
+  --color-emerald-900: #10572f;
+  --color-emerald-950: #023118;
+
+  --color-redstone-50: #ffeff1;
+  --color-redstone-100: #ffdce1;
+  --color-redstone-200: #ffbfc9;
+  --color-redstone-300: #ff92a2;
+  --color-redstone-400: #ff546e;
+  --color-redstone-500: #ff1f41;
+  --color-redstone-600: #ff0026;
+  --color-redstone-700: #db0021;
+  --color-redstone-800: #b3001b;
+  --color-redstone-900: #94081d;
+  --color-redstone-950: #52000c;
+}
