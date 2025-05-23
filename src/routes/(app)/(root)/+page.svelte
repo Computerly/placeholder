@@ -1,7 +1,7 @@
 <script lang="ts">
   import Hero from "./components/Hero.svelte";
   import Services from "./components/Services.svelte";
-  import Pricing from "./components/Pricing.svelte";
+  import Pricing from "./components/Pricing/Pricing.svelte";
   import Process from "./components/Process/Process.svelte";
   import FaQs from "./components/FAQs.svelte";
   import Contact from "./components/Contact.svelte";

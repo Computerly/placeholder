@@ -73,7 +73,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "b",
     targetHandle: "d",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   // flow steps
   {
@@ -84,7 +84,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "b",
     targetHandle: "d",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "eproposal-research",
@@ -94,7 +94,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "b",
     targetHandle: "d",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "eresearch-design",
@@ -104,7 +104,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "c",
     targetHandle: "a",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "edesign-good",
@@ -114,7 +114,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "d",
     targetHandle: "a",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "egood-develop",
@@ -125,7 +125,7 @@ export const initialEdges: Edge[] = [
     sourceHandle: "c",
     targetHandle: "d",
     label: "Yes",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "edevelop-works",
@@ -135,7 +135,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "b",
     targetHandle: "b",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "eworks-launch",
@@ -146,7 +146,7 @@ export const initialEdges: Edge[] = [
     sourceHandle: "d",
     targetHandle: "b",
     label: "Yes",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "elaunch-perfect",
@@ -156,7 +156,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "d",
     targetHandle: "b",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   // decision loops (“No”)
   {
@@ -168,7 +168,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "b",
     targetHandle: "c",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "eworks-develop",
@@ -179,7 +179,7 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "a",
     targetHandle: "c",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
   {
     id: "eperfect-start",
@@ -189,6 +189,6 @@ export const initialEdges: Edge[] = [
     type: "standard",
     sourceHandle: "a",
     targetHandle: "c",
-    markerEnd: { type: MarkerType.ArrowClosed },
+    markerEnd: "sketchedArrow",
   },
 ];

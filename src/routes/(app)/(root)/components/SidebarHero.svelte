@@ -1,5 +1,6 @@
 <script lang="ts">
   import Logo from "$lib/assets/logos/CombinationMarkNegative.svg";
+  import { book_a_meeting_url } from "$lib/config";
 </script>
 
 <div class="px-16 py-24 flex flex-col lg:items-start items-center">
@@ -17,7 +18,9 @@
   </p>
 
   <div class="inline-flex gap-4">
-    <button class="btn btn-accent">Get started</button>
-    <button class="btn btn-neutral">Book a call</button>
+    <a href="/#contact" class="btn btn-accent">Get started</a>
+    <a href={book_a_meeting_url} target="_blank" class="btn btn-neutral"
+      >Book a call</a
+    >
   </div>
 </div>

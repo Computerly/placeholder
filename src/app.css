@@ -3,6 +3,8 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 @plugin "daisyui";
+@import "tw-animate-css";
+
 @font-face {
   font-family: "GeneralSans-Variable";
   src:
@@ -15,9 +17,12 @@
 }
 
 * {
-  @apply font-general-sans;
+  @apply font-general-sans tracking-wide;
 }
 
+*::selection {
+  @apply bg-patina-500/80 text-patina-50;
+}
 @plugin "daisyui/theme" {
   name: "dark";
   default: true;

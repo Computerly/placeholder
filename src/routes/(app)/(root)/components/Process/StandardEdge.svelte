@@ -5,9 +5,10 @@
     EdgeLabel,
     type EdgeProps,
   } from "@xyflow/svelte";
-
+  import { getQuadraticPath } from "./utils";
   let {
     id,
+    data,
     sourceX,
     sourceY,
     sourcePosition,
@@ -19,7 +20,7 @@
   }: EdgeProps = $props();
 
   let [edgePath, labelX, labelY] = $derived(
-    getBezierPath({
+    getQuadraticPath({
       sourceX,
       sourceY,
       sourcePosition,
@@ -29,9 +30,19 @@
       curvature: 0.8,
     }),
   );
+  let isActive = $derived(data?.active);
 </script>
 
-<BaseEdge path={edgePath} {id} {...restProps} />
+<BaseEdge
+  data-path={edgePath}
+  path={edgePath}
+  {id}
+  {...restProps}
+  style={`--xy-edge-stroke-width-default: ${isActive ? 2 : 2};  
+  --xy-edge-stroke-default: ${isActive ? "var(--color-patina-500)" : "inherit"};
+  ${isActive && "--xyflow-marker-fill: var(--color-patina-500);"}
+  `}
+/>
 {#if label}
   <EdgeLabel x={labelX} y={labelY} transparent={true}>
     <div>

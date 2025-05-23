@@ -5,6 +5,7 @@
   import lightBulb from "$lib/assets/services_icons/LightBulbWSpace.png";
   import plant from "$lib/assets/services_icons/PlantWSpace.png";
   import { cn } from "$lib/utils";
+  import SectionLabel from "./Misc/SectionLabel.svelte";
   // TODO: Fix image sizes for responsive design
   // FUTURE: Add lottie animations
 
@@ -22,13 +23,11 @@
     src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/tgs-player.js"
   ></script>
 </svelte:head> -->
-<div class="@container">
-  <div class="flex @3xl:flex-row flex-col border-y border-carbon-500">
+<div class="@container" id="services">
+  <SectionLabel name="Services" />
+  <div class="flex @3xl:flex-row flex-col border-b border-carbon-500">
     <div class="p-8">
-      <div id="services" class="text-2xl mb-2 text-carbon-300 font-medium">
-        Services
-      </div>
-      <h2 class="text-3xl font-medium mb-4">Goal focused digital solutions.</h2>
+      <h3 class="text-3xl font-medium mb-4">Goal focused digital solutions.</h3>
       <p class="text-carbon-300 mb-4">
         There is no room for shortcuts when building a great digital experience.
         Everything starts with thorough research and iterative design.

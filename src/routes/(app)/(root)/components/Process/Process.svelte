@@ -13,9 +13,12 @@
   import DecisionNode from "./DecisionNode.svelte";
   import StandardEdge from "./StandardEdge.svelte";
   import StartNode from "./StartNode.svelte";
+  import CustomMarker from "./CustomMarker.svelte";
   import { initialNodes, initialEdges } from "./nodes-edges";
   import Stepper from "./Stepper.svelte";
   import "@xyflow/svelte/dist/style.css";
+  import ClickDrag from "$lib/assets/clickDrag.gif";
+  import SectionLabel from "../Misc/SectionLabel.svelte";
 
   let nodes = $state.raw<Node[]>(initialNodes);
   let edges = $state.raw<Edge[]>(initialEdges);
@@ -31,26 +34,36 @@
   };
 </script>
 
-<SvelteFlowProvider>
-  <div class="w-full h-96 relative">
-    <SvelteFlow
-      bind:nodes
-      bind:edges
-      colorMode="dark"
-      {nodeTypes}
-      {edgeTypes}
-      fitView
-      connectionMode={ConnectionMode.Loose}
-    >
-      <Background
-        variant={BackgroundVariant.Dots}
-        bgColor="var(--color-carbon-950)"
-      />
-    </SvelteFlow>
+<div id="process">
+  <SectionLabel name={"Process"} />
+  <SvelteFlowProvider>
     <div
-      class="absolute top-4 left-4 bottom-4 w-[30%] p-4 rounded-md bg-white/10 backdrop-blur-sm"
+      class="xyflow w-full auto-rows-fr h-[60dvh] relative items-start content-start grid grid-cols-[30%_auto] border-b border-carbon-500"
     >
       <Stepper />
+      <div class="h-full w-full relative group">
+        <SvelteFlow
+          bind:nodes
+          bind:edges
+          proOptions={{ hideAttribution: true }}
+          colorMode="dark"
+          {nodeTypes}
+          {edgeTypes}
+          fitView
+          connectionMode={ConnectionMode.Loose}
+        >
+          <CustomMarker />
+          <Background
+            variant={BackgroundVariant.Dots}
+            bgColor="var(--color-carbon-950)"
+          />
+        </SvelteFlow>
+        <img
+          src={ClickDrag}
+          alt=""
+          class="absolute right-4 bottom-4 h-12 w-auto group-hover:opacity-0 transition-all duration-600"
+        />
+      </div>
     </div>
-  </div>
-</SvelteFlowProvider>
+  </SvelteFlowProvider>
+</div>
