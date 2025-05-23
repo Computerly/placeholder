@@ -1,12 +1,11 @@
-import { mdsvex } from "mdsvex";
-import adapter from "@sveltejs/adapter-auto";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import adapter from '@sveltejs/adapter-vercel';
 import tailwindcss from "@tailwindcss/vite";
 
 const config = {
-  preprocess: [tailwindcss(), vitePreprocess(), mdsvex()],
+  preprocess: [tailwindcss(), vitePreprocess()],
   kit: { adapter: adapter() },
-  extensions: [".svelte", ".svx"],
+  extensions: [".svelte"],
 };
 
 export default config;
