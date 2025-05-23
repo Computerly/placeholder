@@ -27,14 +27,14 @@
   <SectionLabel name="Services" />
   <div class="flex @3xl:flex-row flex-col border-b border-carbon-500">
     <div class="p-8">
-      <h3 class="text-3xl font-medium mb-4">Goal focused digital solutions.</h3>
+      <h3 class="text-3xl font-medium mb-4">Goal focused digital solutions</h3>
       <p class="text-carbon-300 mb-4">
         There is no room for shortcuts when building a great digital experience.
         Everything starts with thorough research and iterative design.
       </p>
-      <button class="btn btn-neutral items-center"
+      <!-- <button class="btn btn-neutral items-center"
         >See services<ArrowRight size={18} />
-      </button>
+      </button> -->
     </div>
     <div
       class="aspect-square w-full grid grid-cols-2 border-t border-carbon-500 md:border-t-0"

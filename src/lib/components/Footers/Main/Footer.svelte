@@ -52,7 +52,7 @@
     <div class="grid place-items-center">
       <div>
         <p class="text-xl max-w-prose text-center text-carbon-600">
-          Our mission is to transform ambitious ideas into innovative digital
+          Our mission is to transform cool ideas into innovative digital
           experiences that shape businesses and lives. We are driven by
           creativity, forward-thinking, and a relentless pursuit of delivering
           transformative solutions that shape the future.

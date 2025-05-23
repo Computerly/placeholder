@@ -7,9 +7,7 @@
     <MoonMunch />
   </div>
 
-  <h2
-    class="min-h-0 text-carbon-50 font-medium text-center whitespace-pre text-6xl"
-  >
-    Get <i class="mr-[0.25em]">your</i> website, not someone else's
+  <h2 class="min-h-0 text-carbon-50 font-medium text-6xl mb-4">
+    Transforming cool ideas into digital content
   </h2>
 </div>

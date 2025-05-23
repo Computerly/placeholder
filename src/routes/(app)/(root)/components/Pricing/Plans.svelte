@@ -50,11 +50,11 @@
         },
         { name: "Edits", value: "Critical security only" },
         { name: "Hosting Included", type: "supported", value: "none" },
-        { name: "Contract Length", type: "supported", value: "limited" },
+        { name: "Contract Length", type: "supported", value: "none" },
         {
           name: "Best For",
           value:
-            "Small projects or teams with dedicated I.T. and development teams",
+            "Small projects or teams with dedicated IT and development teams",
         },
       ],
     },
@@ -85,7 +85,7 @@
         {
           name: "Best For",
           value:
-            "Customer facing websites or projects needing on-going support and edits.",
+            "Customer facing websites or projects needing ongoing support and edits.",
         },
       ],
     },
@@ -164,7 +164,7 @@
 </div>
 
 {#if notes}
-  <div class="text-carbon-600 text-xs px-8 py-4">
+  <div class="text-carbon-300 text-xs px-8 py-4">
     {#each notes as note, idx}
       <div>
         <span class="text-xs">{idx + 1}</span>
