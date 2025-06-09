@@ -2,23 +2,7 @@
   import { faqs } from "$lib/faqs";
   import { ChevronDown } from "lucide-svelte";
   import { Accordion } from "bits-ui";
-  import { math } from "mathlifier";
   import SectionLabel from "./Misc/SectionLabel.svelte";
-
-  let avgLexicon = $state(35000);
-  let questionLenMin = $state(3);
-  let questionLenMax = $state(20);
-  let ans = $derived(
-    Array.from(
-      { length: Number(questionLenMax) - Number(questionLenMin) },
-      (_, i) => Math.pow(Number(avgLexicon), i) / 1000,
-    ).reduce((a, b) => a + b, 0),
-  );
-  let latexEQ =
-    $derived(`\\sum_{n=${questionLenMin}}^{${questionLenMax}} \\frac{(${avgLexicon})^n}{1000}
-= ${Intl.NumberFormat("us-en", { style: "decimal", notation: "standard" }).format(ans)}  \\approx a lot
-`);
-  let percentAnswered = $derived(faqs.length / ans);
 </script>
 
 <SectionLabel name="FAQs" />
@@ -56,29 +40,4 @@
       </Accordion.Item>
     {/each}
   </Accordion.Root>
-
-  <div class="my-8 text-carbon-200 text-sm">
-    <div class="badge mr-2">Fun Fact</div>
-    If an average person knows around {Intl.NumberFormat("us-en", {
-      style: "decimal",
-    }).format(avgLexicon)}
-    words, and assuming a question length of
-    {Intl.NumberFormat("us-en", { style: "decimal" }).format(questionLenMin)}
-    to
-    {Intl.NumberFormat("us-en", { style: "decimal" }).format(questionLenMax)}
-    words and about every 1 in 1000 word combinations are valid, there are
-    <div class="inline-block my-2">
-      {@html math(latexEQ)}
-    </div>
-    combinations of questions you could ask. So we took the time and answered around
-    {Intl.NumberFormat("us-en", {
-      style: "percent",
-      notation: "scientific",
-      maximumFractionDigits: 3,
-      maximumSignificantDigits: 3,
-      minimumSignificantDigits: 1,
-    }).format(percentAnswered)}
-    {percentAnswered < 0.001 && "(≈ 0%)"}
-    of those questions.
-  </div>
 </div>

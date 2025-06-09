@@ -27,5 +27,7 @@
   class={cn("border-b border-carbon-500 px-8 bg-carbon-500/10", className)}
   {id}
 >
-  {@html `<${tag} >${name}</${tag}>`}
+  <div class="container">
+    {@html `<${tag} >${name}</${tag}>`}
+  </div>
 </div>

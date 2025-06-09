@@ -30,7 +30,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <div
-  class="absolute box inset-0 select-none cursor-pointer"
+  class="absolute z-[0] box inset-0 select-none cursor-pointer"
   onclick={(e) => moveConfetti(e)}
 >
   {#each things as thing}

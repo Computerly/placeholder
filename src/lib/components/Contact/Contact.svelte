@@ -20,7 +20,8 @@
 </script>
 
 <div
-  class=" border-carbon-800 border-3 p-16 m-8 rounded-2xl contactContainer text-carbon-900/80"
+  id="contact"
+  class="border-carbon-800 border-3 p-16 m-8 rounded-2xl contactContainer text-carbon-900/80"
 >
   <h2 class="text-5xl font-semibold">Let's Chat</h2>
   <p class="text-xl">(we don't bite)</p>

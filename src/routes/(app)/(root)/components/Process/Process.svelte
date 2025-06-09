@@ -34,7 +34,7 @@
   };
 </script>
 
-<div id="process">
+<div>
   <SectionLabel name={"Process"} />
   <SvelteFlowProvider>
     <div

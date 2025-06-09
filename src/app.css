@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Indie+Flower&family=Pixelify+Sans:wght@400..700&display=swap");
 @import "tailwindcss";
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
@@ -17,9 +17,13 @@
 }
 
 * {
-  @apply font-general-sans tracking-wide;
+  @apply tracking-wide;
+  font-optical-sizing: auto;
 }
-
+html,
+body {
+  min-width: 300px;
+}
 *::selection {
   @apply bg-patina-500/80 text-patina-50;
 }
@@ -66,10 +70,43 @@
   @apply font-normal;
 }
 
+@utility container {
+  @apply mx-auto;
+}
+
+@utility highlight {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCA3MiAzNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjI0LDAsMCwwLjI0LDAsMCkiPjxwYXRoIGQ9Ik0xMiw0OEMxMiw1MC4wOSAxMS43OSw1NC45OSAxMi42LDU2LjcyQzE1LjU5LDYzLjE4IDI2LjA5LDU2LjY0IDMzLDYzQzMwLjg0LDYzLjE4IDIzLjA1LDYzLjg3IDIxLjgsNjUuMDJDMTguMDIsNjcuODggMjEuMjksNzYuMzUgMjEuOCw4MEwyMS44LDg2TDQwLDg3QzM5LjkzLDg4Ljg4IDQwLjA2LDkxLjA0IDM4Ljk4LDkyLjY5QzM3LjUxLDk0LjkzIDM1LjE1LDk0Ljc1IDMyLjU5LDk2LjJDMjguMzMsOTguNjEgMjYuODcsMTAyLjIyIDI3LjM0LDEwN0wzMC4wMiwxMjMuNDFDMzEuODIsMTI1Ljc1IDQwLjAxLDEyNy45NSA0MywxMjhMODcsMTI4Qzg4LjA4LDEyMS41NiA5MS4xNiwxMjEuOCA5NywxMjIuMDRMMTA5LDEyM0wxMjgsMTIzTDE4MiwxMjJDMTk0LjU4LDEyMS45NyAxODguNDIsMTE5LjAzIDIwMSwxMTlMMjQzLDExOUwyNTgsMTE4QzI1OS41MywxMDkuMSAyNjYuMDEsMTEzLjM3IDI3MC40LDEwOS4xNUMyNzIuNjEsMTA3LjAzIDI3Mi4zLDEwMC44NSAyNzIsOThMMjgwLDk3QzI4MCw5NC4xIDI4MC4yNiw4OC41NSAyNzkuMjYsODYuMDJDMjc2LjQ5LDc4Ljk4IDI2NC42Myw3Ni44OCAyNTgsNzZDMjY1LjE1LDY5LjE5IDI3Ni40LDczLjAzIDI3NC44NSw2Mi4wNEMyNzQuNDcsNTkuMzUgMjczLjczLDU4Ljg1IDI3Miw1N0MyODEuNjgsNTMuNzcgMjgxLDU0LjI4IDI4MSw0NEwyNTgsNDIuMzhDMjUwLDQwLjg0IDI1MS40OCwzOC4wMyAyMzUsMzhMMTg5LDM5TDE3NywzOS44MkwxNTksMzhMMTI4LDM4QzExNi45LDM4LjAyIDEyMC4xNiwzOS40IDExMyw0MC42N0w5Nyw0Mi4xN0w4Nyw0My44M0w1Nyw0NUwzMiw0OEwxMiw0OFoiIHN0eWxlPSJmaWxsOnJnYigxOCwxNjAsMjExKTtmaWxsLXJ1bGU6bm9uemVybzsiLz48L2c+PC9zdmc+");
+  background-position: 50% 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @theme {
-  --font-general-sans: "GeneralSans-Variable", sans-serif;
+  --font-sans: "GeneralSans-Variable", sans-serif;
   --font-display: "GeneralSans-Variable", sans-serif;
   --font-body: "GeneralSans-Variable", sans-serif;
+  --font-cursive: "Covered By Your Grace", cursive;
+  --font-digital: "Pixelify Sans", sans-serif;
+
+  --text-fluid-xs: clamp(0.5rem, 0.6rem + 0.25vw, 0.75rem);
+  --text-fluid-sm: clamp(0.6rem, 0.65rem + 0.35vw, 0.875rem);
+  --text-fluid-base: clamp(0.75rem, 0.75rem + 0.5vw, 1rem);
+  --text-fluid-lg: clamp(0.875rem, 0.85rem + 0.55vw, 1.125rem);
+  --text-fluid-xl: clamp(1rem, 0.9rem + 0.65vw, 1.25rem);
+  --text-fluid-2xl: clamp(1.125rem, 1.05rem + 0.8vw, 1.5rem);
+  --text-fluid-3xl: clamp(1.25rem, 1.3rem + 1vw, 1.875rem);
+  --text-fluid-4xl: clamp(1.5rem, 1.6rem + 1.2vw, 2.25rem);
+  --text-fluid-5xl: clamp(1.875rem, 2rem + 1.5vw, 3rem);
+  --text-fluid-6xl: clamp(2.25rem, 2.5rem + 2vw, 3.75rem);
+  --text-fluid-7xl: clamp(3rem, 3rem + 2.5vw, 4.5rem);
+  --text-fluid-8xl: clamp(3.75rem, 4rem + 3vw, 6rem);
+  --text-fluid-9xl: clamp(4.5rem, 5rem + 4vw, 8rem);
+
+  --height-nav: 60px;
+
+  --spacing-sides: max(1rem, 1rem + 5vw);
 
   --color-carbon-50: #f6f6f6;
   --color-carbon-100: #e7e7e7;

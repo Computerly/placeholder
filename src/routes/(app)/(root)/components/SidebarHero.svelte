@@ -3,7 +3,7 @@
   import { book_a_meeting_url } from "$lib/config";
 </script>
 
-<div class="px-16 py-24 flex flex-col lg:items-start items-center">
+<div class="pr-16 py-24 flex flex-col lg:items-start items-center">
   <a href="/" title="Home" class="mb-8">
     <img src={Logo} alt="Rebricks Logo" class="max-w-40 w-full" />
   </a>
@@ -13,7 +13,7 @@
   </h1>
 
   <p class="text-carbon-300 mb-8 lg:text-left">
-    Websites, apps, and digital products that are built to for business to solve
+    Websites, apps, and digital products that are built for businesses to solve
     real problems.
   </p>
 
