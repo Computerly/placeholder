@@ -52,6 +52,7 @@
       {@render link("About", "/#about")}
       {@render link("Case Studies", "/case-studies")}
       {@render link("Contact", "/#contact", "ml-8")}
+      {@render link("Audit", "/audit")}
       <div
         bind:this={marker}
         class="absolute transition-all duration-750 bottom-0 translate-y-full left-0 bg-patina-500 select-none w-12 h-1 rounded-xs"

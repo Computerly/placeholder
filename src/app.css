@@ -104,9 +104,8 @@ body {
   --text-fluid-8xl: clamp(3.75rem, 4rem + 3vw, 6rem);
   --text-fluid-9xl: clamp(4.5rem, 5rem + 4vw, 8rem);
 
-  --height-nav: 60px;
-
   --spacing-sides: max(1rem, 1rem + 5vw);
+  --spacing-nav: 60px;
 
   --color-carbon-50: #f6f6f6;
   --color-carbon-100: #e7e7e7;
