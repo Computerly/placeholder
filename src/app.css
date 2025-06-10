@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Indie+Flower&family=Pixelify+Sans:wght@400..700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Indie+Flower&family=Pixelify+Sans:wght@400..700&display=swap"); */
 @import "tailwindcss";
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';

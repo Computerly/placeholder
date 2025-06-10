@@ -13,7 +13,7 @@
       delivering transformative solutions that shape the future.
     </p>
     <a href="/about" class="text-carbon-300 flex gap-2 items-center"
-      >Learn more
+      >More about us
       <MoveRight size={18} />
     </a>
   </div>

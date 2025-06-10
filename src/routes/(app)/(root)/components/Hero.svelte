@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Rocket from "$lib/assets/rocketshipTransparent.png";
+  import Rocket from "$lib/assets/rocketshipTransparent.png?enhanced";
   import { Send } from "@lucide/svelte";
 </script>
 
@@ -25,15 +25,15 @@
         class="input placeholder:text-sm placeholder:text-carbon-300 px-4 w-full"
         placeholder="What's your cool idea?"
       />
-      <button class="btn btn-square bg-primary">
+      <button class="btn btn-square bg-primary" title="Send" aria-label="send">
         <Send size={20} />
       </button>
     </form>
     <!-- TODO: fix rocket on mobile/responsive -->
-    <img
+    <enhanced:img
       src={Rocket}
       alt="Rocketship"
-      class="absolute right-0 bottom-0 hidden md:block translate-x-3/4 translate-y-3/5 h-[40dvh]"
+      class="absolute right-0 bottom-0 hidden md:inline-block translate-x-3/4 translate-y-3/5 h-[40dvh] w-auto"
     />
   </div>
 </div>

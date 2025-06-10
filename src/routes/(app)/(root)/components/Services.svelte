@@ -1,8 +1,8 @@
 <script lang="ts">
   import { ArrowRight } from "lucide-svelte";
-  import chessPiece from "$lib/assets/services_icons/ChessWSpace.png";
-  import hammerTransparent from "$lib/assets/services_icons/HammerWSpace.png";
-  import lightBulb from "$lib/assets/services_icons/LightBulbWSpace.png";
+  import chessPiece from "$lib/assets/services_icons/ChessWSpace.png?enhanced";
+  import hammerTransparent from "$lib/assets/services_icons/HammerWSpace.png?enhanced";
+  import lightBulb from "$lib/assets/services_icons/LightBulbWSpace.png?enhanced";
   import plant from "$lib/assets/services_icons/PlantWSpace.png";
   import { cn } from "$lib/utils";
   import SectionLabel from "./Misc/SectionLabel.svelte";
@@ -51,7 +51,9 @@
 </script>
 
 <div class="border-b border-carbon-500 grid grid-cols-2">
-  <div></div>
+  <div class="p-8">
+    <h2 class="highlight text-xl w-fit px-4 py-2">Services</h2>
+  </div>
   <div class="grid grid-cols-3">
     {#each services as service}
       <div class="border-l border-carbon-500 p-8 flex flex-col justify-between">
@@ -65,11 +67,13 @@
             {/each}
           </ul>
         </div>
-        <img
-          src={service.icon}
-          alt="{service.title} icon"
-          class="h-40 w-40 mt-16"
-        />
+        <div class="mt-16">
+          <enhanced:img
+            src={service.icon}
+            alt="{service.title} icon"
+            class="w-40 aspect-square"
+          />
+        </div>
       </div>
     {/each}
   </div>
