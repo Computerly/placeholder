@@ -11,9 +11,9 @@ const launchChromeAndRunLighthouse = (url: string) => {
     .then((chrome) => {
       const opts: LH.Flags = {
         port: chrome.port,
-        logLevel: 'silent'
+        logLevel: 'info'
       };
-      return lighthouse(url, opts, lighthouseConfig).then((results) => {
+      return lighthouse(url, opts).then((results) => {
         chrome.kill();
         return results;
       });
@@ -51,7 +51,9 @@ export async function GET({ url: requestUrl }) {
   }
   const normalizedUrl = normalizeUrl(target);
   try {
+    console.time("Lighthouse")
     const lightHouseReport = await launchChromeAndRunLighthouse(normalizedUrl);
+    console.timeEnd("Lighthouse")
 
     if (!lightHouseReport || !lightHouseReport.lhr) {
       return new Response("Lighthouse report generation failed", {

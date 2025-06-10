@@ -9,20 +9,21 @@ export default class FaviconGather extends Gatherer {
 		symbol: FaviconGather.symbol
 	};
 
-	async startInstrumentation(context) {
-		const session = context.driver.defaultSession;
-		await session.sendCommand('Memory.startSampling');
-	}
+	// async startInstrumentation(context) {
+	// 	const session = context.driver.defaultSession;
+	// 	await session.sendCommand('Memory.startSampling');
+	// }
 
-	async stopInstrumentation(context) {
-		const session = context.driver.defaultSession;
-		await session.sendCommand('Memory.stopSampling');
-	}
+	// async stopInstrumentation(context) {
+	// 	const session = context.driver.defaultSession;
+	// 	await session.sendCommand('Memory.stopSampling');
+	// }
 
 	/** @param {LH.Gatherer.Context} context @return {Promise<any>} */
 	async getArtifact(context) {
 		const { driver } = context;
-		const value = await driver.executionContext.evaluateAsync(`await fetch("/favicon.ico")`);
-		return { status: value.status };
+		const value = await driver.executionContext.evaluateAsync(`fetch("/favicon.ico")`);
+		console.log(value)
+		return { status: 200 };
 	}
 }
