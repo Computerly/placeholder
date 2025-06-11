@@ -7,7 +7,6 @@
   /**
    * Name
    * Email
-   * company
    * Message
    * communication preference?
    */
@@ -19,7 +18,52 @@
   let phone = "";
 </script>
 
-<div
+<div class="py-16">
+  <h1 class="text-carbon-500 text-6xl font-medium text-center mb-4">
+    Contact Us
+  </h1>
+  <h2 class="text-6xl font-medium text-center mb-16">
+    Lorem ipsum dolor, sit amet consectetur adipisicing.
+  </h2>
+  <form action="">
+    <div class="grid gap-4 max-w-prose mx-auto">
+      <div class="flex gap-4">
+        <label class="label-slide w-full">
+          <span>Name</span>
+          <input
+            type="text"
+            name="name"
+            class="input w-full"
+            placeholder="Name"
+          />
+        </label>
+        <label class="label-slide w-full">
+          <span>Email</span>
+          <input
+            type="text"
+            name="email"
+            class="input w-full"
+            placeholder="Email"
+          />
+        </label>
+      </div>
+      <label class="label-slide">
+        <span>Message</span>
+        <textarea
+          name="message"
+          class="textarea resize-none w-full"
+          rows="5"
+          placeholder="Message"
+        ></textarea>
+      </label>
+    </div>
+    <!-- name -->
+    <!-- email -->
+    <!-- message -->
+  </form>
+</div>
+
+<!-- <div
   id="contact"
   class="border-carbon-800 border-3 p-16 m-8 rounded-2xl contactContainer text-carbon-900/80"
 >
@@ -61,7 +105,7 @@
       </button>
     </div>
   </div>
-</div>
+</div> -->
 
 <style>
   .contactContainer {

@@ -1,9 +1,9 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Indie+Flower&family=Pixelify+Sans:wght@400..700&display=swap"); */
 @import "tailwindcss";
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-@plugin "daisyui";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
 @import "tw-animate-css";
+@import "./vars.css";
+@import "./ui-lib.css";
 
 @font-face {
   font-family: "GeneralSans-Variable";
@@ -20,22 +20,22 @@
   @apply tracking-wide;
   font-optical-sizing: auto;
 }
+
 html,
 body {
   min-width: 300px;
 }
+
+body {
+  @apply bg-carbon-950 text-carbon-50;
+}
+
 *::selection {
   @apply bg-patina-500/80 text-patina-50;
 }
-@plugin "daisyui/theme" {
-  name: "dark";
-  default: true;
-  prefersdark: true;
-  color-scheme: "dark";
-  --color-base-100: #1c1c1c;
-  --color-base-200: #3d3d3d;
-  --color-base-300: #454545;
-  --color-base-content: #f6f6f6;
+
+/* @plugin "daisyui/theme" {
+
   --color-primary: #12a0d3;
   --color-primary-content: #0a3247;
   --color-secondary: #fb3999;
@@ -55,16 +55,13 @@ body {
   --radius-selector: 1rem;
   --radius-field: 0.5rem;
   --radius-box: 2rem;
-  --size-selector: 0.21875rem;
-  --size-field: 0.25rem;
-  --border: 1.5px;
-  --depth: 0;
-  --noise: 0;
-}
 
-@utility btn-neutral {
+  --border: 1.5px;
+} */
+
+/* @utility btn-neutral {
   @apply bg-carbon-950 text-carbon-50 border-carbon-500;
-}
+} */
 
 @utility btn {
   @apply font-normal;
@@ -82,125 +79,4 @@ body {
   padding-top: 5px;
   background-repeat: no-repeat;
   background-size: cover;
-}
-@theme {
-  --font-sans: "GeneralSans-Variable", sans-serif;
-  --font-display: "GeneralSans-Variable", sans-serif;
-  --font-body: "GeneralSans-Variable", sans-serif;
-  --font-cursive: "Covered By Your Grace", cursive;
-  --font-digital: "Pixelify Sans", sans-serif;
-
-  --text-fluid-xs: clamp(0.5rem, 0.6rem + 0.25vw, 0.75rem);
-  --text-fluid-sm: clamp(0.6rem, 0.65rem + 0.35vw, 0.875rem);
-  --text-fluid-base: clamp(0.75rem, 0.75rem + 0.5vw, 1rem);
-  --text-fluid-lg: clamp(0.875rem, 0.85rem + 0.55vw, 1.125rem);
-  --text-fluid-xl: clamp(1rem, 0.9rem + 0.65vw, 1.25rem);
-  --text-fluid-2xl: clamp(1.125rem, 1.05rem + 0.8vw, 1.5rem);
-  --text-fluid-3xl: clamp(1.25rem, 1.3rem + 1vw, 1.875rem);
-  --text-fluid-4xl: clamp(1.5rem, 1.6rem + 1.2vw, 2.25rem);
-  --text-fluid-5xl: clamp(1.875rem, 2rem + 1.5vw, 3rem);
-  --text-fluid-6xl: clamp(2.25rem, 2.5rem + 2vw, 3.75rem);
-  --text-fluid-7xl: clamp(3rem, 3rem + 2.5vw, 4.5rem);
-  --text-fluid-8xl: clamp(3.75rem, 4rem + 3vw, 6rem);
-  --text-fluid-9xl: clamp(4.5rem, 5rem + 4vw, 8rem);
-
-  --height-nav: 60px;
-
-  --spacing-sides: max(1rem, 1rem + 5vw);
-
-  --color-carbon-50: #f6f6f6;
-  --color-carbon-100: #e7e7e7;
-  --color-carbon-200: #d1d1d1;
-  --color-carbon-300: #b0b0b0;
-  --color-carbon-400: #888888;
-  --color-carbon-500: #6d6d6d;
-  --color-carbon-600: #5d5d5d;
-  --color-carbon-700: #4f4f4f;
-  --color-carbon-800: #454545;
-  --color-carbon-900: #3d3d3d;
-  --color-carbon-950: #1c1c1c;
-
-  --color-uranium-50: #fefee8;
-  --color-uranium-100: #fefec3;
-  --color-uranium-200: #fefa8a;
-  --color-uranium-300: #fdef47;
-  --color-uranium-400: #fadf15;
-  --color-uranium-500: #efca08;
-  --color-uranium-600: #ca9a04;
-  --color-uranium-700: #a16f07;
-  --color-uranium-800: #85570e;
-  --color-uranium-900: #714712;
-  --color-uranium-950: #422506;
-
-  --color-patina-50: #f0faff;
-  --color-patina-100: #e1f3fd;
-  --color-patina-200: #bce8fb;
-  --color-patina-300: #80d8f9;
-  --color-patina-400: #3dc3f3;
-  --color-patina-500: #12a0d3;
-  --color-patina-600: #078bc2;
-  --color-patina-700: #076f9d;
-  --color-patina-800: #0a5e82;
-  --color-patina-900: #0e4d6c;
-  --color-patina-950: #0a3247;
-
-  --color-cesium-50: #fff8ec;
-  --color-cesium-100: #ffeed3;
-  --color-cesium-200: #ffd9a7;
-  --color-cesium-300: #ffbe6f;
-  --color-cesium-400: #ff9635;
-  --color-cesium-500: #ff780e;
-  --color-cesium-600: #fb6107;
-  --color-cesium-700: #c94305;
-  --color-cesium-800: #9f360d;
-  --color-cesium-900: #802e0e;
-  --color-cesium-950: #451505;
-
-  --color-iodine-50: #f5f0ff;
-  --color-iodine-100: #eee4ff;
-  --color-iodine-200: #dfccff;
-  --color-iodine-300: #c8a4ff;
-  --color-iodine-400: #b070ff;
-  --color-iodine-500: #9c37ff;
-  --color-iodine-600: #960fff;
-  --color-iodine-700: #8c00ff;
-  --color-iodine-800: #7500da;
-  --color-iodine-900: #6200b3;
-  --color-iodine-950: #3b007a;
-
-  --color-rhodium-50: #fef1f8;
-  --color-rhodium-100: #fee5f3;
-  --color-rhodium-200: #ffcbe9;
-  --color-rhodium-300: #ffa1d5;
-  --color-rhodium-400: #ff66b7;
-  --color-rhodium-500: #fb3999;
-  --color-rhodium-600: #dc136c;
-  --color-rhodium-700: #cd095b;
-  --color-rhodium-800: #a90b4b;
-  --color-rhodium-900: #8c0f41;
-  --color-rhodium-950: #560123;
-
-  --color-emerald-50: #effef5;
-  --color-emerald-100: #dafee8;
-  --color-emerald-200: #b7fbd2;
-  --color-emerald-300: #7ff6af;
-  --color-emerald-400: #41e785;
-  --color-emerald-500: #18cf63;
-  --color-emerald-600: #0dac4f;
-  --color-emerald-700: #109648;
-  --color-emerald-800: #116a37;
-  --color-emerald-900: #10572f;
-  --color-emerald-950: #023118;
-
-  --color-redstone-50: #ffeff1;
-  --color-redstone-100: #ffdce1;
-  --color-redstone-200: #ffbfc9;
-  --color-redstone-300: #ff92a2;
-  --color-redstone-400: #ff546e;
-  --color-redstone-500: #ff1f41;
-  --color-redstone-600: #ff0026;
-  --color-redstone-700: #db0021;
-  --color-redstone-800: #b3001b;
-  --color-redstone-900: #94081d;
-  --color-redstone-950: #52000c;
 }

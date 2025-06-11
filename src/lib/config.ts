@@ -1,6 +1,7 @@
 import { dev } from "$app/environment";
 
-export const title = "Rebricks Digital";
+export const baseTitle = "Rebricks Digital";
+export const seperator = " | ";
 export const description =
   "Rebricks Digital is a digital design and development agency, specializing in small businesses.";
 export const url = dev

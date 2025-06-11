@@ -13,16 +13,21 @@
 
   function moveMarker(e: MouseEvent) {
     return;
-    if (!marker || !e.target) return;
+    // if (!marker || !e.target) return;
 
-    marker.style.left = `${e.target.offsetLeft}px`;
-    marker.style.top = `${e.target.offsetTop + e.target.offsetHeight}px`;
-    marker.style.width = `${e.target.offsetWidth}px`;
+    // marker.style.left = `${e.target.offsetLeft}px`;
+    // marker.style.top = `${e.target.offsetTop + e.target.offsetHeight}px`;
+    // marker.style.width = `${e.target.offsetWidth}px`;
   }
 </script>
 
 {#snippet link(text: string, href: string, className: string = "")}
-  <li class={cn("", className)}>
+  <li
+    class={cn(
+      `transition-all ${$scrollState.recommendingNav ? "opacity-100" : "opacity-25"}`,
+      className,
+    )}
+  >
     <a {href} onclick={(e) => moveMarker(e)}>{text}</a>
   </li>
 {/snippet}
@@ -41,7 +46,13 @@
   )}
 >
   <nav class="h-full flex items-center justify-between mx-sides">
-    <a href="/" onclick={(e) => moveMarker(e)}>
+    <a
+      href="/"
+      onclick={(e) => moveMarker(e)}
+      class="{$scrollState.recommendingNav
+        ? 'opacity-100'
+        : 'opacity-25'} transition-all"
+    >
       <img
         class="h-[calc(var(--spacing-nav,60px)*0.5)]"
         src={Logo}
@@ -50,11 +61,10 @@
     >
 
     <ul class="flex items-center gap-4">
-      {@render link("Services", "/#services")}
-      {@render link("Pricing", "/#pricing")}
+      {@render link("Services", "/services")}
+      {@render link("Pricing", "/pricing")}
       {@render link("About", "/#about")}
-      {@render link("Case Studies", "/case-studies")}
-      {@render link("Contact", "/#contact", "ml-8")}
+      {@render link("Contact", "/contact", "ml-8")}
     </ul>
   </nav>
   <!-- <div

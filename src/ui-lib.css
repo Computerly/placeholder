@@ -1,0 +1,41 @@
+@import "./vars.css";
+
+.label-slide {
+	border: solid 1px var(--color-carbon-500);
+	position: relative;
+	border-radius: var(--radius-md);
+}
+
+.center-divider {
+	@apply py-3 flex items-center text-sm before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white;
+}
+
+.vertical-divider {
+	display: block;
+	width: 1px;
+	background-color: var(--color-carbon-500, white);
+	margin-inline: 0.5ch;
+}
+
+/* 
+	Solid
+	Outline
+	Ghost
+	Icon
+	Neutral
+
+	States:
+	- Rest
+	- Hover
+	- Focus
+	- Active?
+	- Disabled
+whitespace-nowrap rounded-sm bg-black border border-black px-4 py-2 text-sm font-medium tracking-wide text-neutral-100 transition hover:opacity-75 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed dark:bg-white dark:border-white dark:text-black dark:focus-visible:outline-white
+*/
+.btn {
+	@apply whitespace-nowrap py-2 tracking-wide hover:opacity-75 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-carbon-600 text-carbon-50 disabled:pointer-events-none cursor-pointer;
+
+	:disabled {
+		@apply bg-red-500 cursor-not-allowed opacity-75;
+	}
+}

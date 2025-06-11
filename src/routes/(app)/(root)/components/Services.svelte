@@ -50,10 +50,9 @@
   ];
 </script>
 
+<SectionLabel name="Services" />
 <div class="border-b border-carbon-500 grid grid-cols-2">
-  <div class="p-8">
-    <h2 class="highlight text-xl w-fit px-4 py-2">Services</h2>
-  </div>
+  <div class="p-8">services</div>
   <div class="grid grid-cols-3">
     {#each services as service}
       <div class="border-l border-carbon-500 p-8 flex flex-col justify-between">

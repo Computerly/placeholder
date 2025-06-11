@@ -7,7 +7,6 @@
     Server,
     Briefcase,
   } from "@lucide/svelte";
-  import SectionLabel from "../Misc/SectionLabel.svelte";
   import { cn } from "$lib/utils";
 
   type AddonBadge = {
@@ -90,7 +89,7 @@
   ];
 </script>
 
-<SectionLabel name="Add-ons" level={2} />
+<!-- <SectionLabel name="Add-ons" level={2} /> -->
 
 <!-- Addons -->
 <div class="grid grid-cols-3 addons border-b border-carbon-500">
@@ -132,7 +131,7 @@
 </div>
 
 <style>
-  @reference "../../../../../app.css";
+  @reference "../../../app.css";
   .addon {
     @apply border-carbon-500 border-0;
   }

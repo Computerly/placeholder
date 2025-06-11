@@ -6,7 +6,7 @@
 </script>
 
 <Header />
-<main class="">
+<main class="min-h-screen">
   {@render children()}
 </main>
 <!-- <Contact /> -->

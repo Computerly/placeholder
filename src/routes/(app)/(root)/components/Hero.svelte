@@ -18,11 +18,11 @@
       experiences—built fast, built right, and ready to launch.
     </p>
 
-    <form class="flex items-center gap-2" action="">
+    <form class="flex items-center justify-center gap-2 w-full" action="">
       <input
         type="text"
         name="idea"
-        class="input placeholder:text-sm placeholder:text-carbon-300 px-4 w-full"
+        class="input placeholder:text-base placeholder:text-carbon-300 pl-4 w-fit-content"
         placeholder="What's your cool idea?"
       />
       <button class="btn btn-square bg-primary" title="Send" aria-label="send">

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SectionLabel from "../Misc/SectionLabel.svelte";
+  import SectionLabel from "$lib/components/SectionLabel/SectionLabel.svelte";
   import { Minus, CircleCheck } from "@lucide/svelte";
 
   type Supported = "none" | "limited" | "full";
