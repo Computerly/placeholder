@@ -1,0 +1,92 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:math";
+@use "sass:map";
+@use "sass:meta";
+
+@use "init" as init;
+
+$baseScales: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950;
+
+$minBrightness: 17%;
+$maxBrightness: 97%;
+
+@debug map.get(init.$brandColors, carbon, shade);
+@debug list.index($baseScales, map.get(init.$brandColors, carbon, shade));
+
+@function generateColorShades($baseColor, $base-scale: 500) {
+  @debug $baseColor;
+  @debug $base-scale;
+  $result: ();
+
+  // Convert to oklch color space
+  $baseColor: color.to-space($baseColor, oklch);
+  $baseLightness: color.channel($baseColor, $channel: "lightness");
+  @if ($baseLightness < $minBrightness or $baseLightness > $maxBrightness) {
+    @debug "base brightness: " + $baseLightness;
+    @debug "min brightness: " + $minBrightness;
+    @debug "max brightness: " + $maxBrightness;
+    @error "color out of bounds";
+  }
+  @debug "BASE SCALE RAW VALUE: #{$base-scale}";
+  @debug "TYPE: #{meta.type-of($base-scale)}";
+
+  @each $s in $baseScales {
+    @debug "SCALE ITEM: #{$s} (type: #{type-of($s)})";
+  }
+
+  $baseScaleIndex: list.index($baseScales, $base-scale);
+
+  @if (not $baseScaleIndex) {
+    @debug $baseScaleIndex;
+    @debug $base-scale;
+    @error "could not find given scale";
+  }
+
+  // This is the delta between scales
+  $colorStep: math.div(
+    $maxBrightness - $minBrightness,
+    list.length($baseScales)
+  );
+
+  // for each scale, create a shade
+  @for $i from 0 through list.length($baseScales) - 1 {
+    $lightnessValue: math.clamp(
+      $minBrightness,
+      $baseLightness + ($colorStep * ($baseScaleIndex - $i - 1)),
+      $maxBrightness
+    );
+    $newColor: $baseColor;
+    $newColor: color.change($newColor, $lightness: $lightnessValue);
+    $result: map.merge(
+      $result,
+      (
+        list.nth($baseScales, $i + 1): $newColor,
+      )
+    );
+  }
+
+  @return $result;
+}
+
+$scales: ();
+// Generate shades for each brand color
+@each $clrName, $keys in init.$brandColors {
+  @debug map.get($keys, shade);
+
+  $scale: generateColorShades(map.values($keys)...);
+  $scales: map.merge(
+    $scales,
+    (
+      $clrName: $scale,
+    )
+  );
+}
+
+:root {
+  @each $clrName, $scale in $scales {
+    @each $key, $value in $scale {
+      --color-#{$clrName}-#{$key}: #{$value};
+    }
+  }
+}

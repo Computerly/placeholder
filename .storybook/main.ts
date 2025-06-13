@@ -5,12 +5,16 @@ const config: StorybookConfig = {
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|ts|svelte)"
   ],
+  staticDirs: [
+    '../static/'
+  ],
   "addons": [
     "@storybook/addon-svelte-csf",
     "@chromatic-com/storybook",
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
-    "@storybook/addon-vitest"
+    "@storybook/addon-vitest",
+    "storybook-addon-pseudo-states"
   ],
   "framework": {
     "name": "@storybook/sveltekit",

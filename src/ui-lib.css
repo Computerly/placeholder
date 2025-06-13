@@ -1,20 +1,20 @@
 @import "./vars.css";
 
 .label-slide {
-	border: solid 1px var(--color-carbon-500);
-	position: relative;
-	border-radius: var(--radius-md);
+  border: solid 1px var(--color-carbon-500);
+  position: relative;
+  border-radius: var(--radius-md);
 }
 
 .center-divider {
-	@apply py-3 flex items-center text-sm before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white;
+  @apply flex items-center py-3 text-sm before:me-6 before:flex-1 before:border-t before:border-gray-200 after:ms-6 after:flex-1 after:border-t after:border-gray-200 dark:text-white;
 }
 
 .vertical-divider {
-	display: block;
-	width: 1px;
-	background-color: var(--color-carbon-500, white);
-	margin-inline: 0.5ch;
+  display: block;
+  width: 1px;
+  background-color: var(--color-carbon-500, white);
+  margin-inline: 0.5ch;
 }
 
 /* 
@@ -30,12 +30,41 @@
 	- Focus
 	- Active?
 	- Disabled
-whitespace-nowrap rounded-sm bg-black border border-black px-4 py-2 text-sm font-medium tracking-wide text-neutral-100 transition hover:opacity-75 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed dark:bg-white dark:border-white dark:text-black dark:focus-visible:outline-white
 */
 .btn {
-	@apply whitespace-nowrap py-2 tracking-wide hover:opacity-75 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-carbon-600 text-carbon-50 disabled:pointer-events-none cursor-pointer;
+  @apply bg-carbon-600 text-carbon-50 inline-flex cursor-pointer items-center gap-x-2 rounded-lg border border-transparent px-4 py-2 text-sm font-medium tracking-wide whitespace-nowrap hover:opacity-75 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100 active:outline-offset-0 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-red-500 disabled:opacity-75;
+}
 
-	:disabled {
-		@apply bg-red-500 cursor-not-allowed opacity-75;
-	}
+/* CSS */
+.button-1 {
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family:
+    "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #f082ac;
 }
