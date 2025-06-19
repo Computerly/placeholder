@@ -6,4 +6,4 @@
   <title>{makePageTitle("Services")}</title>
 </svelte:head>
 
-<div class="mt-nav mx-sides">services</div>
+<div class="pt-nav mx-sides">services</div>

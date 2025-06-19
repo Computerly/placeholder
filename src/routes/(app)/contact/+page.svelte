@@ -10,6 +10,6 @@
 <!-- Book a call
 send a generic message
 Request a quote -->
-<div class="mt-nav mx-sides">
+<div class="pt-nav mx-sides">
   <Contact />
 </div>

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { faqs } from "$lib/faqs";
+  import { faqs } from "$lib/components/FAQs/faqs";
   import { ChevronDown } from "lucide-svelte";
   import { Accordion } from "bits-ui";
-  import SectionLabel from "./Misc/SectionLabel.svelte";
+  import SectionLabel from "$lib/components/SectionLabel/SectionLabel.svelte";
 </script>
 
 <SectionLabel name="FAQs" />

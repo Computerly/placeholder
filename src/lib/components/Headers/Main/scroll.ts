@@ -7,6 +7,7 @@ const SCROLL_THRESHOLD = 78;
 type ScrollStatus = {
   hasScrolled: boolean;
   recommendingNav: boolean;
+  scrollDistance: number;
 };
 
 export const navScroll = () => {
@@ -16,6 +17,7 @@ export const navScroll = () => {
   const initialState = {
     hasScrolled: false,
     recommendingNav: true,
+    scrollDistance: 0,
   };
 
   if (browser) {
@@ -43,6 +45,7 @@ export const navScroll = () => {
       update(() => ({
         hasScrolled: scrollY > SCROLL_THRESHOLD,
         recommendingNav: showNav,
+        scrollDistance: scrollY,
       }));
     };
 

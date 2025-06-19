@@ -5,7 +5,7 @@
   import { book_a_meeting_url } from "$lib/config";
 </script>
 
-<div class="border-b border-carbon-500 mt-nav mx-sides">
+<div class="border-b border-carbon-500 pt-nav mx-sides">
   <!-- <SectionLabel name="Pricing" /> -->
 
   <div class="p-8 border-b border-carbon-500 min-h-[50dvh] grid items-center">

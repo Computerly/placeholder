@@ -6,14 +6,14 @@
 <div
   class="h-[90dvh] grid place-items-center gridBG overflow-hidden p-8 border-b border-carbon-500"
 >
-  <div class="flex flex-col items-center relative">
-    <h1 class="text-fluid-6xl text-center whitespace-pre mb-4 font-medium">
+  <!-- <div class="flex flex-col items-center relative">
+    <h1 class="text-fluid-6xl/16 text-center whitespace-pre mb-4 font-black">
       Transforming<br />cool
       <span class="font-cursive whitespace-pre highlight">ideas</span>
       into<br />
       <span class="font-digital">digital</span> content
     </h1>
-    <p class="text-center mb-8 max-w-prose">
+    <p class="text-center text-xl mb-8 max-w-prose">
       We help turn ideas into polished websites, tools, and digital
       experiences—built fast, built right, and ready to launch.
     </p>
@@ -29,13 +29,13 @@
         <Send size={20} />
       </button>
     </form>
-    <!-- TODO: fix rocket on mobile/responsive -->
+    
     <enhanced:img
       src={Rocket}
       alt="Rocketship"
       class="absolute right-0 bottom-0 hidden md:inline-block translate-x-3/4 translate-y-3/5 h-[40dvh] w-auto"
     />
-  </div>
+  </div> -->
 </div>
 
 <style>
