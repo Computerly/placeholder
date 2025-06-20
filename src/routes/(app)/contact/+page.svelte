@@ -1,12 +1,12 @@
 <script lang="ts">
   import Contact from "$lib/components/Contact/Contact.svelte";
-  import { makePageTitle } from "$lib/utils";
+  import SEO from "$lib/components/SEO/SEO.svelte";
 </script>
 
-<svelte:head>
-  <title>{makePageTitle("Contact")}</title>
-</svelte:head>
-
+<SEO
+  title={"Contact"}
+  description="Message, email, or call to learn if Rebricks Digital can help you."
+/>
 <!-- Book a call
 send a generic message
 Request a quote -->

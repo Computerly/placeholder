@@ -9,3 +9,8 @@ export const url = dev
   : "https://rebricksdigital.com/";
 export const book_a_meeting_url =
   "https://calendly.com/caleb-rebricksdigital/30min";
+export const defaultImages = {
+  og: "/og-default.png",
+  twitterCard: "/twitter-card.png",
+  twitterSummary: "/twitter-summary.png",
+};

@@ -113,10 +113,7 @@
         <span>Rebricks Digital™ {new Date().getFullYear()}</span>
         <ul class="flex flex-wrap gap-4">
           <li>
-            <a href="/legal">Legal</a>
-          </li>
-          <li>
-            <a href="/legal/terms">Terms</a>
+            <a href="/legal/privacy-policy">Privacy Policy</a>
           </li>
         </ul>
       </div>

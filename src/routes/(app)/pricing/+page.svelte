@@ -1,10 +1,11 @@
 <script lang="ts">
   import Pricing from "./Pricing.svelte";
-  import { makePageTitle } from "$lib/utils";
+  import SEO from "$lib/components/SEO/SEO.svelte";
 </script>
 
-<svelte:head>
-  <title>{makePageTitle("Pricing")}</title>
-</svelte:head>
+<SEO
+  title="Pricing"
+  description="Explore flexible pricing plans from Rebricks Digital, designed for startups and small businesses. Get high-impact websites without the agency overhead."
+/>
 
 <Pricing />

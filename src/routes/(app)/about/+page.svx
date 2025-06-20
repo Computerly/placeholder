@@ -1,0 +1,40 @@
+---
+title: About
+description: Rebricks Digital is a digital agency that transforms cool ideas into innovative digital experiences. Friendly, nerdy, and committed to helping you move fast with clarity.
+---
+
+# About Rebricks Digital
+
+Welcome to **Rebricks Digital** — a small-but-mighty digital agency with a passion for turning big ideas into breakthrough experiences.
+
+## 🚀 Our Mission  
+**Transform cool ideas into innovative digital experiences that revolutionize businesses and lives.**
+
+We believe that every great idea deserves a great execution. Whether you're launching a product, refining your brand, or building a better way to serve your customers, we’re here to help bring your vision to life with speed, care, and creativity.
+
+## 🧠 Who We Are
+
+Rebricks Digital is a creative-first, tech-powered agency that thrives at the intersection of design and development. We're part strategists, part builders, and 100% committed to helping you make something people love.
+
+Our work spans websites, tools, and interactive prototypes—all built with attention to detail, performance, and the human side of digital.
+
+## 🏅 Our Values
+
+- **Creative** — Every solution is a fresh perspective.  
+- **Innovative** — We experiment, iterate, and build what's next.
+
+## ♥️ Our Personality
+
+We're friendly. We're helpful. We're proudly nerdy.  
+Working with us feels like having a smart, approachable partner who’s just as invested in your success as you are.
+
+## ✨ Why Rebricks?
+
+We don’t just “make websites.”  
+We help you **prove ideas, test markets, and create digital leverage**—so you can move faster, with less risk and more clarity.
+
+We’re especially good at:
+
+- Fast, high-fidelity prototypes  
+- Frontend-first web experiences  
+- Custom tools and internal platforms
