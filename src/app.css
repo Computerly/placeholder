@@ -65,6 +65,17 @@ body {
   @apply bg-carbon-950 text-carbon-50 border-carbon-500;
 }
 
+@utility btn {
+  @apply disabled:brightness-75;
+}
+
+@utility btn-secondary {
+  @apply bg-carbon-50 text-carbon-950 disabled:text-carbon-500 hover:bg-carbon-200 border-transparent hover:border-transparent disabled:text-shadow-none;
+}
+
+@utility btn-ghost {
+  @apply hover:bg-carbon-50/10 hover:border-carbon-50/10 border border-transparent;
+}
 @utility container {
   @apply mx-auto;
 }
