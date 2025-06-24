@@ -26,7 +26,8 @@ export const timelineStep = new StepNode({
 export const goalsStep = new StepNode({
   name: "Goals",
   component: Goal,
-  nextStep: contactStep,
+  nextStep: timelineStep,
+  nextStepResolver: null,
 });
 
 export const projectTypeStep = new StepNode({
@@ -35,5 +36,18 @@ export const projectTypeStep = new StepNode({
   nextStep: contactStep,
   validator: () => {
     return !!globalData.projectType;
+  },
+  nextStepResolver: ({ data, self }) => {
+    switch (data.projectType) {
+      case "website":
+        self.setNext(goalsStep);
+        break;
+      case "other":
+        break;
+      default:
+        break;
+    }
+
+    return null;
   },
 });

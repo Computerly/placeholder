@@ -1,14 +1,12 @@
 //aka Node
 import type { Component as SvelteComponent } from "svelte";
 import lodash from "lodash";
+import { globalData } from "$lib/helloBrick/engine.svelte";
 
 // Generic interface for metadata to allow flexible typing
 interface StepMetadata {
   [key: string]: any;
 }
-
-// Next step resolver function type
-type NextStepResolver = (...args: any) => string | null;
 
 // Configuration interface for creating a new step
 interface StepConfig<T extends StepMetadata = StepMetadata> {
@@ -16,6 +14,7 @@ interface StepConfig<T extends StepMetadata = StepMetadata> {
   validator?: () => boolean;
   name: string;
   nextStep?: StepNode<any> | null;
+  nextStepResolver?: (...args: any) => StepNode<any> | null;
   metaData?: T;
 }
 
@@ -26,6 +25,15 @@ class StepNode<T extends StepMetadata = StepMetadata> {
   public metaData: T;
   public readonly validator: () => boolean;
   private _nextStep: StepNode<any> | null;
+  private _nextStepResolver: ({
+    data,
+    metaData,
+    self,
+  }: {
+    data: object;
+    metaData: any;
+    self: StepNode;
+  }) => StepNode<any> | null;
 
   constructor(config: StepConfig<T>) {
     this.component = config.component;
@@ -34,6 +42,7 @@ class StepNode<T extends StepMetadata = StepMetadata> {
     this._nextStep = config.nextStep || null;
     this.metaData = config.metaData || ({} as T);
     this.validator = config.validator || (() => true);
+    this._nextStepResolver = config.nextStepResolver || null;
   }
 
   // Method to check if this is the last step
@@ -46,6 +55,19 @@ class StepNode<T extends StepMetadata = StepMetadata> {
     return this._nextStep;
   }
 
+  setNext(node: StepNode) {
+    this._nextStep = node;
+  }
+
+  // Called whenever the globaldata has been updated
+  update() {
+    // Determine next
+    this._nextStepResolver({
+      data: globalData,
+      metaData: this.metaData,
+      self: this,
+    });
+  }
   // Method to update metadata
   updateMetadata(newMetadata: Partial<T>): void {
     this.metaData = { ...this.metaData, ...newMetadata };

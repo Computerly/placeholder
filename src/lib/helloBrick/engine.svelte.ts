@@ -5,11 +5,17 @@ import type { Component as SvelteComponent } from "svelte";
 
 class Stepper {
   private _current: StepNode;
+
   constructor(start: StepNode) {
     if (!start) {
       throw Error("Head is unset");
     }
     this._current = $state(start);
+
+    $effect(() => {
+      // whenever data changes in the store, trigger update on current component
+      if (globalData) this._current.update();
+    });
   }
 
   getCurrentComponent(): SvelteComponent {
