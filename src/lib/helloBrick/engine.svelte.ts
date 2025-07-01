@@ -12,9 +12,11 @@ class Stepper {
     }
     this._current = $state(start);
 
-    $effect(() => {
-      // whenever data changes in the store, trigger update on current component
-      if (globalData) this._current.update();
+    $effect.root(() => {
+      $effect(() => {
+        // whenever data changes in the store, trigger update on current component
+        if (globalData) this._current.update();
+      });
     });
   }
 
