@@ -25,19 +25,19 @@
   let links: Link[] = $state([
     {
       title: "Services",
-      url: "/#services",
+      url: "/services",
     },
     {
       title: "Process",
-      url: "/#process",
+      url: "/",
     },
     {
       title: "About",
-      url: "/#about",
+      url: "/about",
     },
     {
       title: "Pricing",
-      url: "/#pricing",
+      url: "/pricing",
     },
   ]);
 
@@ -63,8 +63,12 @@
   });
 </script>
 
-<footer class="py-8 px-32 border-t border-carbon-500 overflow-hidden relative">
-  <div class="grid grid-cols-[auto_1fr] items-center gap-16 py-16">
+<footer
+  class="py-8 px-sides border-t border-carbon-500 overflow-hidden relative"
+>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-[auto_1fr] items-center gap-16 py-16"
+  >
     <div class="text-carbon-200">
       <div class="flex items-center mb-4 gap-2 text-sm">
         <img
@@ -83,7 +87,7 @@
         Digital Design and<br />Development
       </div>
     </div>
-    <div class="grid grid-cols-2 w-fit mx-auto gap-x-16">
+    <div class="flex flex-wrap w-fit gap-x-16">
       {#snippet linksSnip(links: Link[])}
         <ul class="grid">
           {#each links as item}
@@ -106,10 +110,12 @@
     </div>
   </div>
 
-  <div class="flex justify-between items-end z-10">
+  <div
+    class="flex flex-wrap-reverse justify-center gap-8 items-center z-10 md:justify-between sm:items-start"
+  >
     <div class="text-sm text-carbon-400">
       <!-- Legal -->
-      <div class="flex flex-wrap gap-16">
+      <div class="flex items-center whitespace-nowrap gap-16">
         <span>Rebricks Digital™ {new Date().getFullYear()}</span>
         <ul class="flex flex-wrap gap-4">
           <li>

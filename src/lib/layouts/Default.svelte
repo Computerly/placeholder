@@ -5,6 +5,8 @@
 
 <SEO {title} {description} />
 
-<div class="py-[calc(var(--spacing-nav)+4rem)] prose mx-auto">
-  {@render children?.()}
+<div class="mx-sides">
+  <div class="py-[calc(var(--spacing-nav)+4rem)] prose mx-auto">
+    {@render children?.()}
+  </div>
 </div>

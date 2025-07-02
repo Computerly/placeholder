@@ -18,7 +18,7 @@
   </p>
 
   <div class="inline-flex gap-4">
-    <a href="/#contact" class="btn btn-accent">Get started</a>
+    <a href="/contact" class="btn btn-accent">Get started</a>
     <a href={book_a_meeting_url} target="_blank" class="btn btn-neutral"
       >Book a call</a
     >

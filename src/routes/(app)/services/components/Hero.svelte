@@ -1,3 +1,7 @@
+<script>
+  import { ArrowDown } from "@lucide/svelte";
+</script>
+
 <div
   class="min-h-[90dvh] pb-8 pt-[calc(var(--spacing-nav)+4rem)] grid place-items-center-safe shadow-base-100 rounded-b-4xl bg-patina-500"
 >
@@ -37,5 +41,8 @@
         <span>Branding</span>
       </a>
     </div>
+  </div>
+  <div class="motion-safe:animate-bounce temporary-bounce">
+    <ArrowDown size={24} />
   </div>
 </div>

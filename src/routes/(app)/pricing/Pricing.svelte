@@ -27,7 +27,7 @@
         <a href={book_a_meeting_url} target="_blank" class="btn btn-outline"
           >Book a meeting</a
         >
-        <a href="/#contact" class="btn btn-dash">Request proposal</a>
+        <a href="/contact" class="btn btn-dash">Request proposal</a>
       </div>
     </div>
   </div>

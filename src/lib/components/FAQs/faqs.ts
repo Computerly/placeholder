@@ -12,7 +12,7 @@ export const faqs: FAQ[] = [
   {
     title: "How much will it cost?",
     description:
-      "Less than $1,000,000.13, but more than $0.99.<br><br>As much as we would like to give exact prices, each project has its own facets and requirements. Because we also hate not knowing how much something will cost, we have a <a class='btn btn-link p-0 m-0 border-0 h-fit' href='/#pricing'>whole section</a> dedicated to trying to answer that question.",
+      "Less than $1,000,000.13, but more than $0.99.<br><br>As much as we would like to give exact prices, each project has its own facets and requirements. Because we also hate not knowing how much something will cost, we have a <a class='btn btn-link p-0 m-0 border-0 h-fit' href='/pricing'>whole section</a> dedicated to trying to answer that question.",
   },
   {
     title: "What should I know before I start?",
