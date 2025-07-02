@@ -23,11 +23,8 @@
   let { tag, className } = $state(getHeadingAttributes(level));
 </script>
 
-<div
-  class={cn("border-b border-carbon-500 px-8 bg-carbon-500/10", className)}
-  {id}
->
-  <div class="container">
+<div class={cn("border-b border-carbon-500 bg-carbon-500/10", className)} {id}>
+  <div class="mx-sides">
     {@html `<${tag} >${name}</${tag}>`}
   </div>
 </div>

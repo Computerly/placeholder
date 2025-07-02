@@ -7,12 +7,12 @@
 
 <SectionLabel name="FAQs" />
 
-<div class="p-8 border-b border-carbon-500">
+<div class="py-8 mx-sides border-b border-carbon-500">
   <Accordion.Root type="single" class="w-full" value={"item-0"}>
     {#each faqs as faq, index}
       <Accordion.Item
         value="item-{index}"
-        class="border-carbon-700 group border-b px-1.5"
+        class="border-carbon-700 group border-b"
       >
         <Accordion.Header>
           <Accordion.Trigger

@@ -1,6 +1,8 @@
 <script lang="ts">
   import SEO from "$lib/components/SEO/SEO.svelte";
   import Hero from "./components/Hero.svelte";
+  import Services from "./components/Services.svelte";
+  import FaQs from "$lib/components/FAQs/FAQs.svelte";
 </script>
 
 <SEO
@@ -8,9 +10,8 @@
   description="Discover the digital services Rebricks Digital offers. From custom web design to performance optimization. Built to elevate your brand and drive results."
 />
 
-<div class="bg-carbon-950 min-h-[500vh]">
+<div class="">
   <Hero />
-  <div class="p-16">
-    <button class="outline text-carbon-500">Button Text</button>
-  </div>
+  <Services />
+  <FaQs />
 </div>

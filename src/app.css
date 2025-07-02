@@ -63,9 +63,6 @@ body {
 *::selection {
   @apply bg-patina-500/80 text-patina-50;
 }
-button {
-  @apply btn;
-}
 
 @utility btn {
   border-radius: 0.25rem;
